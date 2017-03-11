@@ -1,0 +1,23 @@
+﻿@using StudentsMVC.Models
+@using StudentsMVC.Controllers
+@model Student
+@{
+    ViewBag.Title = "ViewStudent";
+}
+@section header {
+    <h1>
+        Student System
+    </h1>
+}
+
+@section footer {
+    @DateTime.Now.Year
+}
+Please enter student's name:
+<form action="/Home/ViewStudent" method="get">
+    <input type="text" name="studentName"/>
+    <input type="submit" value="Submit" />
+</form>
+@ViewBag.Student<br />
+@ViewBag.FacultyNumber
+@ViewBag.Message

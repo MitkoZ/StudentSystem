@@ -1,0 +1,22 @@
+﻿@using StudentsMVC.Models
+@model Student
+@{
+    ViewBag.Title = "EditStudent";
+}
+
+    @section header {
+        <h1>
+            Student System
+        </h1>
+    }
+
+    @section footer {
+        @DateTime.Now.Year
+    }
+    <h2>EditStudent</h2>
+    <form action="/Home/EditStudentPost" method="post">
+        <input type="text" name="Name" value="name" />
+        <input type="text" name="FacultyNumber" value="FacultyNumber" readonly />
+        <input type="submit" value="Submit" />
+    </form>
+    @ViewBag.Updated
