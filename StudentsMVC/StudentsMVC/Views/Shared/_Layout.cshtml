@@ -20,12 +20,16 @@
                 @Html.ActionLink("View Student", "ViewStudent")
                 @Html.ActionLink("Edit Student", "EditStudent");
                 @Html.ActionLink("Index", "Index");
+                @Html.ActionLink("Login", "Login");
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                 </ul>
             </div>
         </div>
+    </div>
+    <div style="float:right;"> 
+        @Session["username"]
     </div>
 @RenderSection("header",required:false)
     <div class="container body-content">

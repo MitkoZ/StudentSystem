@@ -1,0 +1,13 @@
+﻿@model StudentsMVC.Models.LoginMenu
+@{
+    ViewBag.Title = "LoginView";
+}
+
+<h2>LoginView</h2>
+
+@using (Html.BeginForm("Login", "Home"))
+{
+    @:Username: @Html.TextBoxFor(login =>login.Username)
+    @:Password: @Html.TextBoxFor(login=>login.Password)
+    <input type="submit" value="Submit" />
+}

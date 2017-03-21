@@ -58,5 +58,13 @@ namespace StudentsMVC.Controllers
             
         }
         
+        public ActionResult Login(LoginMenu login)
+        {
+            LoginMenu loginMenu = new LoginMenu();
+            Session["username"] = login.Username;
+            return View(loginMenu);
+
+        }
+        
     }
 }
